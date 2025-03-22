@@ -14,7 +14,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
+  /* 添加控制英雄图片大小的样式 */
+		.hero-image {
+			margin-bottom: 2rem;
+			overflow: hidden;
+			max-height: 300px; /* 控制容器高度 */
+			max-width: 800px; /* 控制容器宽度 */
+			border-radius: 12px;
+			margin-left: auto; /* 添加左侧自动边距 */
+			margin-right: auto; /* 添加右侧自动边距 */
+  		}	
+  		main {
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
